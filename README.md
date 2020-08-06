@@ -11,7 +11,10 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-* [Usage](#usage)
+* [Getting Started](#getting-started)
+	* [Installation](#installation)
+	* [Restoring](#restoring)
+	* [Usage](#usage)
 * [Contact](#contact)
 
 ## About The Project
@@ -20,7 +23,7 @@ This project provides a simple bash implementation of git credential helper, it 
 
 It also provides a basic GnuPG encryption of the stored credentials.
 
-## Usage
+## Getting Started
 
 ### Installation
 
@@ -31,7 +34,7 @@ git clone https://github.com/dvdlevanon/git-enhanced-credential-helper.git
 
 Run the `install-credential-helper.sh` script to install the new credential helper.
 
-Encryption is enabled by passing the `--secure` as follow:
+Encryption is enabled by passing the `--secure` parameter as follow:
 ```
 ./install-credential-helper.sh --secure
 ```

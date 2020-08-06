@@ -1,3 +1,4 @@
+<!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -5,16 +6,14 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
   <h3 align="center">Git Enhanced Credential Helper</h3>
 
   <p align="center">
     A git Credential Helper that supports multi accounts + encryption
   </p>
-  
+</p>
+
+
 ## Table of Contents
 
 * [About the Project](#about-the-project)

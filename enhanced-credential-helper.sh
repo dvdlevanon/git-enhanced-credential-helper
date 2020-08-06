@@ -80,7 +80,7 @@ function validate_params() {
 		error "Missing mandatory git path dir"
 		return 1
 	fi
-	
+			
 	return 0
 }
 
@@ -148,6 +148,9 @@ function get_credential() {
 function set_credential() {
 	local persistance_file=$(get_persistance_file)
 	local persistance_file_encrypted=${persistance_file}.gpg
+	
+	local persistance_directory=$(dirname $persistance_file)
+	mkdir -p "$persistance_directory"
 	
 	echo "username=$input_username" > $persistance_file
 	echo "password=$input_password" >> $persistance_file

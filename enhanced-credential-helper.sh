@@ -49,9 +49,9 @@ function read_credential_input() {
 			input_password="$value"
 		elif [ "$key" == "url" ]; then
 			input_url="$value"
-		elif [ "$key" == "wwwauth[]" ]; then
-			:
 		elif [ "$key" == "realm" ]; then
+			:
+		elif [ "$key" == "wwwauth[]" ]; then
 			:
 		else
 			error "Unknown input line: $input_line"

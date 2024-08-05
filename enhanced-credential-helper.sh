@@ -32,7 +32,7 @@ function error() {
 
 function read_credential_input() {
 	local pipe_input_lines=$(</dev/stdin)
-	
+
 	for input_line in $pipe_input_lines; do
 		local key=$(echo "$input_line" | awk -F "=" '{ print $1 }')
 		local value=$(echo "$input_line" | awk -F "=" '{ print $2 }')
@@ -52,6 +52,8 @@ function read_credential_input() {
 		elif [ "$key" == "realm" ]; then
 			:
 		elif [ "$key" == "wwwauth[]" ]; then
+			:
+		elif [ "$key" == "capability[]" ]; then
 			:
 		else
 			error "Unknown input line: $input_line"
@@ -205,4 +207,6 @@ function main() {
 	return 0
 }
 
-main "$@" || exit 1
+if [ "$skip_main" != "true" ]; then
+	main "$@" || exit 1
+fi
